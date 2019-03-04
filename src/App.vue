@@ -2,9 +2,9 @@
   <div id="app">
     <div class="topbar">
       <div class="topNav">
-        <router-link to="home"><div class="navItem">home</div></router-link>
-        <router-link to="guide"><div class="navItem">guide</div></router-link>
-        <router-link to="about"><div class="navItem">about</div></router-link>
+        <router-link to="/home"><div class="navItem">home</div></router-link>
+        <router-link to="/guide"><div class="navItem">guide</div></router-link>
+        <router-link to="/about"><div class="navItem">about</div></router-link>
       </div>
       <div class="logReg"><a href=""><span>log in</span></a><a href=""><span>register</span></a></div>
     </div>
@@ -29,19 +29,19 @@ export default {
 </script>
 
 <style lang="sass">
-#app
-  margin-top: 30px
+
 body
   margin: 0
 a
   text-decoration: none
-  // &active
-  //   color: #000
+  color: #000
 </style>
 
 <style lang="sass" scoped>
+#app
+  margin-top: 30px
 .topbar
-  padding: 0 20%
+  display: flex
   height: 30px
   position: fixed
   top: 0
@@ -58,13 +58,16 @@ a
   line-height: 30px
   justify-content: space-between
   color: #000 !important
+  margin-left: 20%
   *
     flex: auto
 .router-link-active
   .navItem
-    background: #4ad
+    background: #36a
+    color: #fff
 .logReg
   display: flex
+  margin-right: 20%
   width: 150px
   justify-content: space-between
   height: 30px

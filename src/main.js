@@ -19,16 +19,18 @@ const router = new VueRouter({
     {
       path: '/home',
       component: home,
-      children: [
-        { path: '/routerfirst', component: routerFirst },
-        { path: '/routersecond/:id', component: routerSecond },
-        { path: '/routerthird', component: routerThird },
-        { path: '/routerfourth', component: routerFourth },
-        { path: '/routerfifth', component: routerFifth }
+      children:
+      [
+        // { path: '/', redierct: './routerfirst' },
+        { path: 'routerfirst', component: routerFirst },
+        { path: 'routersecond', component: routerSecond },
+        { path: 'routerthird', component: routerThird },
+        { path: 'routerfourth', component: routerFourth },
+        { path: 'routerfifth/:id', component: routerFifth }
       ]
     },
-    { path: './guide', component: guide },
-    { path: './about', component: about }
+    { path: '/guide', component: guide },
+    { path: '/about', component: about }
   ]
 })
 Vue.config.productionTip = false

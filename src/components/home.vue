@@ -1,23 +1,23 @@
 <template>
   <div id="home">
-    <!-- <nav class="sideNav">
-        <router-link to="/routerfirst">
+    <nav class="sideNav">
+        <router-link to="/home/routerfirst">
           <div class="navItem">router 1</div>
         </router-link>
-        <router-link to="/routersecond">
+        <router-link to="/home/routersecond">
           <div class="navItem">router 2</div>
         </router-link>
-        <router-link to="/routerthird">
+        <router-link to="/home/routerthird">
           <div class="navItem">router 3</div>
         </router-link>
-        <router-link to="/routerfourth">
+        <router-link to="/home/routerfourth">
           <div class="navItem">router 4</div>
         </router-link>
-        <router-link to="/routerfifth">
+        <router-link to="/home/routerfifth">
           <div class="navItem">router 5</div>
         </router-link>
       </nav>
-      <router-view class="routerVue"></router-view> -->
+      <router-view class="routerVue"></router-view>
   </div>
 </template>
 
