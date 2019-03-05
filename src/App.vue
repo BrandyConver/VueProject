@@ -8,7 +8,7 @@
       </div>
     </div>
     <section>
-      <router-view></router-view>
+      <router-view class="viewp"></router-view>
     </section>
   </div>
 </template>
@@ -36,6 +36,8 @@ a
   color: #000
 input
   outline: none
+*
+  box-sizing: border-box
 </style>
 
 <style lang="sass" scoped>
@@ -52,8 +54,10 @@ input
   line-height: 50px
   justify-content: space-between
   *
-    flex: auto
+    flex: 1
 .router-link-active
   .navItem
     background: #5be
+.viewp
+  width: 100%
 </style>

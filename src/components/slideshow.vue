@@ -1,11 +1,9 @@
 <template>
   <div id="slideshow">
-    <div>
-      <a href="#" v-for="item in items" :key="item.link">
-        <div class="slide" :style="{backgroundImage:item.img}">
-          <p>{{item.word}}</p>
-        </div>
-      </a>
+    <div class="slidebox">
+      <div v-for="(item, index) in items" :key="index" class="slide" >
+        <a :href="item.link"><img :src=item.img alt=""></a>
+      </div>
     </div>
   </div>
 </template>
@@ -14,18 +12,42 @@
 export default {
   name: 'slideshow',
   props: [
-    items
-  ]
+    'items'
+  ],
+  data () {
+    return {
+    }
+  },
+  computed: {
+  },
+  created () {
+    console.log(this.items)
+  }
 }
 </script>
 
 <style lang="sass" scoped>
+$aborder: 1px solid
 #slideshow
   width: 100%
+  overflow: scroll
+  border: 1px solid #000
+  max-width: 640px
+  min-width: 375px
+.slidebox
+  width: 400%
+.slide
+  width: 25%
   height: 100%
-  .slide
+  display: inline-block
+  border: 1px solid #f00
+  background: #2CF
+  a
+    display: block
     width: 100%
-    height: 100%
-// @Keyframes slide
-
+    // height: 100%
+  img
+    // display: block
+    width: 100%
+    // height: 100%
 </style>
