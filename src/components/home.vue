@@ -1,6 +1,9 @@
 <template>
   <div id="home">
-    <nav class="sideNav">
+    <inputBox class="searchbox" :items=></inputBox>
+    <slideShow ></slideShow>
+
+    <!-- <nav class="sideNav">
         <router-link to="/home/routerfirst">
           <div class="navItem">router 1</div>
         </router-link>
@@ -17,11 +20,35 @@
           <div class="navItem">router 5</div>
         </router-link>
       </nav>
-      <router-view class="routerVue"></router-view>
+      <router-view class="routerVue"></router-view> -->
   </div>
 </template>
 
+<script>
+import inputBox from './inputbox.vue'
+import slideShow from '/slideshow.vue'
+export default {
+  name: 'home',
+  components: {
+    inputbox,
+    slideShow
+  },
+  data () {
+    return {
+      slideitmes: [{link: 'https://www.baidu.com', img: '', word: 'this is word'}]
+    }
+  }
+}
+</script>
+
 <style lang="sass" scoped>
+.searchbox
+  position: fixed
+  top: 0
+  width: 100%
+.slideShow
+
+.slide
 .sideNav
   text-align: center
   position: absolute
