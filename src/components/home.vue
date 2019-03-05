@@ -17,9 +17,10 @@ export default {
   data () {
     return {
       slideitmes: [
-        { link: 'https://www.baidu.com', img: '../assets/img/exampleimg1.jpg', word: 'this is word 1' },
-        { link: 'https://www.zhihu.com', img: '../assets/img/exampleimg2.jpg', word: 'this is word 2' },
-        { link: '#', img: '../assets/img/exampleimg3.jpg', word: 'this is word 3' }
+        { link: 'https://www.baidu.com', img: require('../assets/img/exampleimg1.jpg'), word: 'this is word 1' },
+        { link: 'https://www.zhihu.com', img: require('../assets/img/exampleimg2.jpg'), word: 'this is word 2' },
+        { link: 'http://daily.zhihu.com', img: require('../assets/img/exampleimg3.jpg'), word: 'this is word 3' },
+        { link: 'https://nba.hupu.com/', img: require('../assets/img/exampleimg4.jpg'), word: 'this is word 3' }
       ]
     }
   }
@@ -37,7 +38,9 @@ export default {
   box-shadow: 0 0 5px 8px rgba(255, 255, 255, 0.7)
 .slideShow
   width: 100%
-  height: 150px
+  height: 200px
   position: absolute
   top: 0
+  left: 0
+  right: 0
 </style>

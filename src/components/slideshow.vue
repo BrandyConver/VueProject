@@ -2,7 +2,7 @@
   <div id="slideshow">
     <div class="slidebox">
       <div v-for="(item, index) in items" :key="index" class="slide" >
-        <a :href="item.link"><img :src=item.img alt=""></a>
+        <a :href="item.link"><img :src="item.img" alt=""></a>
       </div>
     </div>
   </div>
@@ -32,22 +32,23 @@ $aborder: 1px solid
   width: 100%
   overflow: scroll
   border: 1px solid #000
-  max-width: 640px
-  min-width: 375px
 .slidebox
   width: 400%
+  height: 100%
+  // transform: translateX(-25%)
 .slide
   width: 25%
   height: 100%
   display: inline-block
   border: 1px solid #f00
-  background: #2CF
+  background: #2FF
   a
     display: block
     width: 100%
-    // height: 100%
+    height: 100%
   img
-    // display: block
+    display: block
     width: 100%
-    // height: 100%
+    height: 100%
+
 </style>
