@@ -1,6 +1,8 @@
 <template>
-  <div>
-    vue-router2
+  <div id="category">
+    <div>
+      
+    </div>
   </div>
 </template>
 

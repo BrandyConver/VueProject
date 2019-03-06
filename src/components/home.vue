@@ -20,7 +20,7 @@ export default {
         { link: 'https://www.baidu.com', img: require('../assets/img/exampleimg1.jpg'), word: 'this is word 1' },
         { link: 'https://www.zhihu.com', img: require('../assets/img/exampleimg2.jpg'), word: 'this is word 2' },
         { link: 'http://daily.zhihu.com', img: require('../assets/img/exampleimg3.jpg'), word: 'this is word 3' },
-        { link: 'https://nba.hupu.com/', img: require('../assets/img/exampleimg4.jpg'), word: 'this is word 3' }
+        { link: 'https://nba.hupu.com/', img: require('../assets/img/exampleimg4.jpg'), word: 'this is word 4' }
       ]
     }
   }
@@ -35,7 +35,7 @@ export default {
   top: 0
   width: 100%
   z-index: 99
-  box-shadow: 0 0 5px 8px rgba(255, 255, 255, 0.7)
+  // box-shadow: 0 0 5px 8px rgba(255, 255, 255, 0.7)
 .slideShow
   width: 100%
   height: 200px

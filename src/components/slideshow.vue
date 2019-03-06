@@ -1,7 +1,7 @@
 <template>
   <div id="slideshow">
     <div class="slidebox">
-      <div v-for="(item, index) in items" :key="index" class="slide" >
+      <div v-for="(item, index) in myslideitems" :key="index" class="slide" >
         <a :href="item.link"><img :src="item.img" alt=""></a>
       </div>
     </div>
@@ -19,9 +19,13 @@ export default {
     }
   },
   computed: {
+    myslideitems () {
+      let myitems = this.items
+      myitems.push(myitems[0])
+      return myitems
+    }
   },
   created () {
-    console.log(this.items)
   }
 }
 </script>
@@ -30,18 +34,17 @@ export default {
 $aborder: 1px solid
 #slideshow
   width: 100%
-  overflow: scroll
-  border: 1px solid #000
+  overflow: hidden
+  // border: 1px solid #000
 .slidebox
-  width: 400%
+  width: 500%
   height: 100%
-  // transform: translateX(-25%)
+  animation: mySlide 10s cubic-bezier(0.5, 0, 0.5, 1) 0.5s infinite backwards
 .slide
-  width: 25%
+  width: 20%
   height: 100%
   display: inline-block
-  border: 1px solid #f00
-  background: #2FF
+  // border: 1px solid #f00
   a
     display: block
     width: 100%
@@ -50,5 +53,23 @@ $aborder: 1px solid
     display: block
     width: 100%
     height: 100%
-
+@Keyframes mySlide
+  0%
+    transform: translateX(0%)
+  15%
+    transform: translateX(-20%)
+  25%
+    transform: translateX(-20%)
+  40%
+    transform: translateX(-40%)
+  50%
+    transform: translateX(-40%)
+  65%
+    transform: translateX(-60%)
+  75%
+    transform: translateX(-60%)
+  90%
+    transform: translateX(-80%)
+  100%
+    transform: translateX(-80%)
 </style>
