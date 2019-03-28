@@ -1,7 +1,14 @@
 <template>
   <div id="category">
     <div>
-      
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   </div>
 </template>

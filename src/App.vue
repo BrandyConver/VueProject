@@ -1,63 +1,29 @@
 <template>
   <div id="app">
-    <div class="tabBar">
-      <div class="nav">
-        <router-link to="/home"><div class="navItem">home</div></router-link>
-        <router-link to="/trolly"><div class="navItem">trolly</div></router-link>
-        <router-link to="/my"><div class="navItem">my</div></router-link>
-      </div>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
-    <section>
-      <router-view class="viewp"></router-view>
-    </section>
+    <router-view/>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'app',
-  data () {
-    return {
+<style lang="scss">
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+#nav {
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
     }
-  },
-  components: {
-  },
-  methods: {
   }
 }
-</script>
-
-<style lang="sass">
-body
-  margin: 0
-  padding: 0
-a
-  text-decoration: none
-  color: #000
-input
-  outline: none
-*
-  box-sizing: border-box
-</style>
-
-<style lang="sass" scoped>
-.tabBar
-  position: fixed
-  bottom: 0
-  width: 100%
-  background: #fff
-  color: #000
-  text-align: center
-.nav
-  display: flex
-  height: 50px
-  line-height: 50px
-  justify-content: space-between
-  *
-    flex: 1
-.router-link-active
-  .navItem
-    background: #5be
-.viewp
-  width: 100%
 </style>

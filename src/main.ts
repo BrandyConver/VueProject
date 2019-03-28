@@ -3,7 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 
 import home from './components/home.vue'
-import trolly from './components/trolly.vue'
+import cart from './components/cart.vue'
 import my from './components/my.vue'
 
 Vue.use(VueRouter)
@@ -12,7 +12,7 @@ const router = new VueRouter({
   routes: [
     { path: '/', redirect: '/home' },
     { path: '/home', component: home },
-    { path: '/trolly', component: trolly },
+    { path: '/cart', component: cart },
     { path: '/my', component: my }
   ]
 })
