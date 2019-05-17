@@ -1,29 +1,73 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="tabBar">
+      <div class="nav" v-show="isNavUrl">
+        <router-link to="/home"><div class="navItem">home</div></router-link>
+        <router-link to="/cart"><div class="navItem">cart</div></router-link>
+        <router-link to="/my"><div class="navItem">my</div></router-link>
+      </div>
     </div>
-    <router-view/>
+    <section>
+      <router-view class="viewp"></router-view>
+    </section>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+export default {
+  name: 'app',
+  data () {
+    return {
+      isNavUrl: true
+    }
+  },
+  components: {
+  },
+  methods: {
+  },
+  watch: {
+    $route (to, from) {
+      if (['/home', '/cart', '/my', '/'].indexOf(to.path) >= 0) {
+        this.isNavUrl = true
+      } else {
+        this.isNavUrl = false
+      }
     }
   }
 }
+</script>
+
+<style lang="sass">
+body
+  margin: 0
+  padding: 0
+a
+  text-decoration: none
+  color: #000
+input
+  outline: none
+*
+  box-sizing: border-box
+</style>
+
+<style lang="sass" scoped>
+.tabBar
+  position: fixed
+  bottom: 0
+  width: 100%
+  background: #fff
+  color: #000
+  text-align: center
+.nav
+  display: flex
+  height: 50px
+  line-height: 50px
+  justify-content: space-between
+  *
+    flex: 1
+.router-link-active
+  .navItem
+    background: #5be
+.viewp
+  width: 100%
 </style>

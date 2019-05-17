@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     myslideitems () {
-      let myitems = this.items
+      const myitems = this.items
       myitems.push(myitems[0])
       return myitems
     }
