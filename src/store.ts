@@ -11,7 +11,7 @@ const user = {
     setId (state: any, newId: string) {
       state.userId = newId
     },
-    signUp (state) {
+    signUp (state: any) {
       state.userName = 'unSigned'
       state.status = 'unSigned'
     }
